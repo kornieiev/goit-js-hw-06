@@ -4,7 +4,8 @@
 
 Створить окремий елемент <li>. Обов'язково
 використовуй метод document.createElement().
-Додасть назву інгредієнта як його текстовий вміст.
+Додасть назву інгредієнта як його текстовий
+вміст.
 Додасть елементу клас item.
 Після чого, вставить усі <li> за одну операцію
 у список ul#ingredients.
@@ -20,3 +21,14 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
+const ul = document.querySelector("#ingredients");
+// const li = ingredients.length;
+for (let i = 0; i < ingredients.length; i++) {
+  const liIngredients = document.createElement('li');
+  liIngredients.textContent = ingredients[i];
+  liIngredients.class = 'item';
+  ul.append(liIngredients);
+  console.log(ul);
+  console.log(liIngredients.class);
+}
