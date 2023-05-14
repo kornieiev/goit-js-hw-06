@@ -22,38 +22,16 @@ Category: Technologies
 Elements: 5
 */
 
-// const categories = document.querySelector("ul#categories");
-// console.log("ul - categories", categories);
-// console.log("ul - length - categories", categories.length);
+const categories = document.querySelector("#categories");
 
-// console.log("");
+const categoriesItems = categories.querySelectorAll(".item");
+console.log(`Number of categories: ${categoriesItems.length}`);
 
-// const categoriesItems = categories.querySelectorAll("li.item");
-// console.log("li - categoriesItems", categoriesItems);
-// console.log("li - length - categoriesItems", categoriesItems.length);
+console.log("\n");
 
-// // console.log(`Number of categories: ${categoriesItems.length}`);
+categoriesItems.forEach((category) => {
+  console.log(`Category: ${category.querySelector("h2").textContent}`);
 
-// categoriesItems.forEach((item) => {
-//   const categoryName = item.querySelector("h2").textContent;
-//   // console.log("categoryName", categoryName);
-//   // console.log("categoryName", categoryName.length);
-
-//   const categoryElements = item.querySelectorAll("li").length;
-
-//   // console.log(`Category: ${categoryName}`);
-//   // console.log(`Elements: ${categoryElements}`);
-// });
-
-const numbers = [-4, 0, 50, 6];
-
-console.log(numbers);
-console.log(...numbers);
-
-function multiply(...args) {
-  console.log(args); // массив всех аргументов
-}
-
-multiply(1, 2);
-multiply(1, 2, 3);
-multiply(1, 2, 3, 4);
+  console.log(`Elements: ${category.querySelectorAll("li").length}`);
+  console.log("\n");
+});
