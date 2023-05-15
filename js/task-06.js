@@ -36,11 +36,8 @@ function onInputBlur(event) {
   const inputValue = event.target.value.trim();
   const validLength = Number(inputEl.dataset.length);
 
-  if (inputValue.length === validLength) {
-    inputEl.classList.add("valid");
-    inputEl.classList.remove("invalid");
-  } else {
-    inputEl.classList.add("invalid");
-    inputEl.classList.remove("valid");
-  }
+  const isValid = inputValue.length === validLength;
+
+  inputEl.classList.toggle("valid", isValid);
+  inputEl.classList.toggle("invalid", !isValid);
 }

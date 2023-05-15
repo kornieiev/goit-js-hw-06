@@ -31,20 +31,12 @@ const decrementBtn = document.querySelector('button[data-action="decrement"]');
 const incrementBtn = document.querySelector('button[data-action="increment"]');
 const valueEl = document.querySelector("#value");
 
-// console.log(decrementBtn);
-// console.log(incrementBtn);
-// console.log(valueEl);
-
 decrementBtn.addEventListener("click", function () {
-  // console.log("click-dec");
   counterValue.decrement();
-  // console.log(counterValue);
   valueEl.textContent = counterValue.value;
 });
 
 incrementBtn.addEventListener("click", function () {
-  // console.log("click-inc");
   counterValue.increment();
-  // console.log(counterValue);
   valueEl.textContent = counterValue.value;
 });

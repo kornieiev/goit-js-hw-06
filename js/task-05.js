@@ -8,27 +8,14 @@
 */
 
 const textInput = document.querySelector("#name-input");
-// console.log(textInput);
 const textOutput = document.querySelector("#name-output");
-// console.log(textOutput);
 const defaultOutputValue = textOutput.textContent.trim();
-// console.log("defaultOutputValue:", defaultOutputValue);
 
 textInput.addEventListener("input", () => {
-  const inputValue = textInput.value;
+  const inputValue = textInput.value.trim();
   if (inputValue) {
     textOutput.textContent = inputValue;
   } else {
     textOutput.textContent = defaultOutputValue;
   }
-  // console.log("textOutput", textOutput);
-  // console.log("inputValue", inputValue);
 });
-
-textInput.addEventListener("blur", () => {
-  if (!textInput.value) {
-    textOutput.textContent = defaultOutputValue;
-  }
-});
-
-// console.log("textOutput.textContent", textOutput.textContent);

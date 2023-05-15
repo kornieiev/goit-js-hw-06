@@ -24,7 +24,6 @@
 */
 
 const form = document.querySelector(".login-form");
-// console.log(form);
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -33,7 +32,7 @@ form.addEventListener("submit", (e) => {
     elements: { email, password },
   } = e.currentTarget;
 
-  if (email.value === "" || password.value === "") {
+  if (email.value.trim() === "" || password.value.trim() === "") {
     alert("Заповніть усі поля!");
     return;
   }
@@ -44,5 +43,5 @@ form.addEventListener("submit", (e) => {
   };
 
   console.log(registerValues);
-  form.reset();
+  e.target.reset();
 });

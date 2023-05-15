@@ -17,18 +17,15 @@ function getRandomHexColor() {
 */
 
 const body = document.body;
-// console.log(body);
 const btnEl = document.querySelector(".change-color");
-// console.log(btnEl);
 const spanEl = document.querySelector(".color");
-// console.log(spanEl);
 
 btnEl.addEventListener("click", changeBGColor);
 
 function changeBGColor() {
   const color = getRandomHexColor();
   console.log(color);
-  body.style.backgroundColor = getRandomHexColor();
+  body.style.backgroundColor = color;
   spanEl.textContent = color;
 }
 
